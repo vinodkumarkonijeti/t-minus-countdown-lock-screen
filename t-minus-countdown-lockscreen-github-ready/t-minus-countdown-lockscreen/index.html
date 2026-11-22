@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090b13" />
+  <title>T-Minus Countdown Lock Screen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="T-Minus home"><span class="brand-mark">T−</span><span>T-MINUS <small>LOCK SCREEN STUDIO</small></span></a>
+      <span class="live-indicator"><i></i> LIVE PREVIEW</span>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">YOUR DEADLINE. YOUR DESIGN.</p>
+      <h1>Make every day <span>count.</span></h1>
+      <p class="intro-copy">Turn your deadline into a lock screen that keeps your next milestone in sight.</p>
+    </section>
+
+    <main class="workspace">
+      <section class="panel editor-panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">CUSTOMIZE</p><h2>Your countdown</h2></div>
+          <span class="step-number">01 / EDIT</span>
+        </div>
+
+        <label class="field-label" for="goal-input">Goal title</label>
+        <input id="goal-input" class="text-field" type="text" maxlength="48" value="PORTFOLIO LAUNCH" placeholder="e.g. PORTFOLIO LAUNCH" />
+
+        <div class="field-grid">
+          <div>
+            <label class="field-label" for="deadline-input">Target date</label>
+            <input id="deadline-input" class="text-field" type="date" />
+          </div>
+          <div>
+            <label class="field-label" for="theme-select">Accent theme</label>
+            <select id="theme-select" class="text-field">
+              <option value="violet">Electric violet</option>
+              <option value="cyan">Arctic cyan</option>
+              <option value="orange">Solar orange</option>
+              <option value="lime">Neon lime</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="section-line"><span>Milestones</span><span id="progress-label">0 / 0 COMPLETE</span></div>
+        <div class="progress-track"><span id="progress-bar"></span></div>
+        <div id="milestone-inputs" class="milestone-editor"></div>
+        <button id="add-btn" class="secondary-button" type="button"><span>＋</span> Add milestone</button>
+
+        <div class="section-line photo-line"><span>Background photo</span><span class="optional">OPTIONAL</span></div>
+        <label class="upload-control" for="photo-input"><span class="upload-icon">↥</span><span><b>Choose a photo</b><small>Use your own image as the lock-screen background</small></span></label>
+        <input id="photo-input" type="file" accept="image/*" hidden />
+        <button id="remove-photo" class="text-button" type="button" hidden>Remove background photo</button>
+        <p class="privacy-note">Your edits and selected photo stay in this browser on this device.</p>
+      </section>
+
+      <section class="preview-column">
+        <div class="preview-heading"><div><p class="eyebrow">INSTANT PREVIEW</p><h2>Your lock screen</h2></div><span class="aspect-label">9:16 MOBILE</span></div>
+        <div class="phone-frame" id="lockscreen">
+          <div class="wallpaper-overlay"></div>
+          <div class="phone-status"><span>●</span><span id="status-date">SUN, NOV 22</span><span>▮▮▮</span></div>
+          <div class="clock-zone">
+            <span class="time" id="clock-time">09:26</span>
+            <span class="date" id="clock-date">Sunday, November 22</span>
+            <span class="countdown-chip" id="countdown-chip">T− 00 DAYS</span>
+          </div>
+          <div class="glass-card">
+            <p class="card-kicker">THE MISSION</p>
+            <h2 id="preview-title">T-MINUS COUNTDOWN:<br>PORTFOLIO LAUNCH</h2>
+            <div class="card-divider"></div>
+            <ul id="preview-list"></ul>
+            <div class="card-footer"><span>STAY FOCUSED.</span><span id="completion-count">0% DONE</span></div>
+          </div>
+          <div class="phone-bottom"><span></span><small>ONE STEP AT A TIME</small><span></span></div>
+        </div>
+        <p class="preview-hint">Preview updates as you edit. Tap a milestone on the phone to mark it complete.</p>
+      </section>
+    </main>
+    <footer><span> T− / T-MINUS LOCK SCREEN STUDIO</span><span>BUILT FOR YOUR NEXT BIG THING</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
